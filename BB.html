@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -10,7 +10,7 @@
 <style type="text/css">
 	body{
 		margin: 40px;
-		background-color: #E9E9E9;
+		background-color: #fff;
 	}
 	Div.TTT{
 		width: 400px;
@@ -30,6 +30,120 @@
 	}
 	
 </style>
+<style type="text/css">
+ * {
+	margin:0;
+	padding:0;
+}
+body {
+	color:#333;
+	font-family:Georgia,"Times New Roman",Times serif;
+	text-align:center;
+}
+input {
+	display:none;
+}
+label {
+	margin-top:150px;
+	margin-left:50px;
+	display:inline-block;
+	width:80px;
+	height:30px;
+	border:1px solid #000;
+	border-radius:10px;
+	line-height:30px;
+}
+.btn {
+	margin:200px auto;
+}
+.all {
+	perspective:1000px;
+	width:250px;
+	height:250px;
+	text-align:center;
+	display:inline-block;
+}
+.box {
+	display:inline-block;
+	text-align:center;
+	position:relative;
+	width:100%;
+	height:100%;
+	transition:all 1s;
+	transform-style:preserve-3d;
+	transform:rotateX(-20deg) rotateY(20deg);
+}
+.face {
+	overflow:hidden;
+	position:absolute;
+	border:1px solid #666;
+	background:#fff;
+	box-shadow:inset 0 0 50px rgba(0,0,0,0.4);
+	color:#333;
+	line-height:250px;
+	opacity:0.8;
+}
+.box_font {
+	width:400px;
+	height:400px;
+	transform:translate3d(0,0,200px);
+	background:url(10.jpg);
+	background-size:100% 100%;
+}
+.box_top {
+	width:400px;
+	height:400px;
+	transform:rotateX(90deg) translate3d(0,0,200px);
+	background:url(0.png);
+	background-size:100% 100%;
+}
+.box_bottom {
+	width:400px;
+	height:400px;
+	transform:rotateX(-90deg) translate3d(0,0,200px);
+	background:url(0.png);
+	background-size:100% 100%;
+}
+.box_left {
+	width:400px;
+	height:400px;
+	transform:rotateY(-90deg) translate3d(0,0,200px);
+	background:url(8.png);
+	background-size:100% 100%
+}
+.box_right {
+	width:400px;
+	height:400px;
+	transform:rotateY(90deg) translate3d(0,0,200px);
+	background:url(8.png);
+	background-size:100% 100%
+}
+.box_back {
+	width:400px;
+	height:400px;
+	transform:rotateY(180deg) translate3d(0,0,200px);
+	background:url(9.jpg);
+	background-size:100% 100%
+}
+#bottom:checked ~ .all .box {
+	transform:rotateX(90deg);
+}
+#top:checked ~ .all .box {
+	transform:rotateX(-90deg);
+}
+#left:checked ~ .all .box {
+	transform:rotateY(90deg);
+}
+#right:checked ~ .all .box {
+	transform:rotateY(-90deg);
+}
+#back:checked ~ .all .box {
+	transform:rotateY(180deg);
+}
+#bottom,#top,#left,#right,#back:hover {
+	background:#ccc;
+}
+</style>
 </head>
 <body>
     <div style="text-align: center;">
@@ -43,78 +157,81 @@
         <span style="color: rgb(0, 176, 240);"><span style="font-size: 24px;"></span><span style="font-size: 24px;">&nbsp;&nbsp; &nbsp;<em> &nbsp;<span style="font-size: 30px; color: rgb(63, 63, 63);">PART&nbsp; THREE</span></em><br/></span></span>
     </p>
     <p style="text-align:  margin-top: 20px;">
-        <img src="5.png" title="页面.PNG" alt="页面.PNG" style="width: 100%; height: 125px;" width="751" height="125"/>
+        <img src="5.PNG" title="页面.PNG" alt="页面.PNG" style="width: 100%; height: 125px;" width="751" height="125"/>
     </p>
     <p style="margin-top: 10px; text-align: left;">
         <span style="color: rgb(0, 176, 240);"><span style="font-size: 24px;"></span></span><br/>
     </p>
     <p style="margin-top: 5px;">
-        <img src="5.png" title="正视图.png" alt="正视图.png" style="width: 1px; height: 2px;" width="1" height="2"/><img src="8.png" title="正视图.png" alt="正视图.png" style="width: 529px; height: 412px;" width="529" height="412"/>
+        <img src="8.png" title="正视图.png" alt="正视图.png" style="width: 529px; height: 412px;" width="529" height="412"/>
     </p>
-    <script language =javascript >
-var curIndex=0;
-
-var timeInterval=2000;
-var arr=new Array();
-for (var i = 1; i <=3; i++) {
-	arr[i]=""+i+".png"
-}
-setInterval(changeImg,timeInterval);
-function changeImg()
-{
-var obj=document.getElementById("obe");
-if (curIndex==arr.length-1)
-{
-curIndex=1;
-}
-else
-{
-curIndex+=1;
-}
-obj.src=arr[curIndex];
-}
-</script>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+   
+<br><br><br><br>
 <p style="margin-top: 25px;">
-        <span style="font-size: 40px;color:#D2D;"><strong>我们的平台功能</strong></span>
+        <span style="font-size: 40px;color:#09F;"><strong>我们的平台功能</strong></span>
     </p>
-<center><img id=obe src ="1.png" width=80% height=400px border:5px solid #09F><br>
- 
-    </center>
-    <p style="text-indent: 2em; text-align: left; margin-top: 10px;">
-        <strong><span style="font-size: 20px; color:#09F;">蓝宝机器人是我司研发的一款能够辅助学前教育保育工作的高科技保育机器人，融入了体温、健康情况监测、只能考勤等功能，能够通过蓝宝强大的数据计算能力协助学校，幼儿园完成更加全面的保育工作。蓝宝拥有强大的人脸识别功能，记住每一个小朋友对应的监护人，协助老师完成学生入园、出园接送工作</span></strong>
-    </p><br><br><br><br><br><br><br><br><br><br>
+    <center><p>请点下面</p></center>
+<input id="font" type="radio" name="select" checked="" >
+<label for="font" class="text">正面</label>
+
+<input id="left" type="radio" name="select" checked="">
+<label for="left" class="text">左边</label>
+
+<input id="right" type="radio" name="select" checked="">
+<label for="right" class="text">右边</label>
+
+<input id="top" type="radio" name="select" checked="">
+<label for="top" class="text">顶部</label>
+
+<input id="bottom" type="radio" name="select" checked="">
+<label for="bottom" class="text">底部</label>
+
+<input id="back" type="radio" name="select" checked="">
+<label for="back" class="text">背面</label>
+	<div class="btn"></div>
+<div class="all">
+
+    <div class="box">
+        <div class="box_font face"></div>
+        <div class="box_top face"></div>
+        <div class="box_bottom face"></div>
+        <div class="box_left face"></div>
+        <div class="box_right face"></div>
+        <div class="box_back face"></div>
+    </div>
+</div><br><br>
+   <br><br><br><br><br><br><br><br><br><br>
     <p style="text-indent: 2em; text-align: left; margin-top: 10px;">
         <strong><span style="font-size: 14px; color: rgb(0, 0, 0);"><br/></span></strong>
-    </p>
+    </p><br><br><br><br><br><br><br><br><br><br>
     <p style="text-indent: 2em; text-align: center;border:1px solid #09F;">
-        <span style="font-size: 40px; color: #F0E;"><strong>我们的拥有的功能</strong></span><strong><span style="font-size: 14px; color: rgb(0, 0, 0);"><br/></span></strong>
+        <span style="font-size: 40px; color: #09F;"><strong>我们的拥有的功能</strong></span><strong><span style="font-size: 14px; color: rgb(0, 0, 0);"><br/></span></strong>
     </p><br><br><br><br>
    <div class="TTT TTTLEFT">
-    	<img id=obj src ="6.png" width=400 height=400>
-    	<p class="caption">哈撒泣</p>
+    	<img id=obj src ="7.png" width=400 height=400>
+    	<p class="caption">反</p>
     </div>
      <div class="TTT TTTRIGHT">
-    	<img id=obk src ="7.png" width=400 height=400>
-    	<p>索耶啊力给痛</p>
+    	<img id=obk src ="6.png" width=400 height=400>
+    	<p>正</p>
     </div>
     <div style="text-align: left;">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: rgb(0, 176, 240); font-size: 18px;">人脸识别</span></strong><span style="color: rgb(0, 176, 240); font-size: 18px;">：</span><strong><span style="color: rgb(0, 176, 240); font-size: 18px;"><span style="color: rgb(0, 0, 0); font-size: 14px;">入园时识别学生，并将学生的体温和入园信息</span><span style="font-size: 14px; color: rgb(0, 0, 0);"></span></span><span style="font-size: 14px;">提交致对应学生档案</span></strong>
     </div>
     <p style="text-align: left; margin-top: 0px; margin-bottom: 5px;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size: 18px; color: rgb(0, 176, 240);">体温测量</span></strong><span style="font-size: 18px; color: rgb(0, 176, 240);">：</span><strong><span style="font-size: 14px;">检测学生入园时的体温，通过医学公式计算出给学生每天的身体状况。并且将每日数据提交至校方后 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 台存档与推送至各班级老师</span></strong>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="font-size: 18px; color: rgb(0, 176, 240);">体温测量</span></strong><span style="font-size: 18px; color: rgb(0, 176, 240);">：</span><strong><span style="font-size: 14px;">检测学生入园时的体温，通过医学公式计算出给学生每天的身体状况。并且将每日数据提交至校方后台存档与推送至各班级老师</span></strong>
     </p>
     <p style="text-align: left; margin-top: 0px; margin-bottom: 5px;">
         <span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 16px; color: rgb(0, 176, 240);"> </span><strong><span style="font-size: 14px; color: rgb(0, 176, 240);"><span style="font-size: 18px;">免水消毒</span></span></strong><span style="font-size: 14px; color: rgb(0, 176, 240);"><span style="font-size: 18px;"></span> :</span>&nbsp;&nbsp; <strong>提供免洗洗手液，为学生入园提供消毒清洁功能</strong><br/></span>
     </p>
     <p style="text-align: left; margin-top: 0px; margin-bottom: 5px;">
-        <span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="font-size: 18px; color: rgb(0, 176, 240);">出园提示</span></strong><span style="font-size: 18px; color: rgb(0, 176, 240);">：</span><strong> 家长接送学生时通过监护人人脸识别，系统匹配对应学生名字，然后通过自动排号与叫号功能， &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解决幼儿园接送孩子出园秩序问题</strong></span>
+        <span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="font-size: 18px; color: rgb(0, 176, 240);">出园提示</span></strong><span style="font-size: 18px; color: rgb(0, 176, 240);">：</span><strong> 家长接送学生时通过监护人人脸识别，系统匹配对应学生名字，然后通过自动排号与叫号功能，解决幼儿园接送孩子出园秩序问题</strong></span>
     </p>
     <p style="text-align: left; margin-top: 0px; margin-bottom: 5px;">
         <span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="color: rgb(0, 176, 240); font-size: 18px;">数据报告</span></strong><span style="color: rgb(0, 176, 240); font-size: 18px;">：</span><strong><span style="font-size: 14px;"> 每日学生体温、身体健康状况、入园与家长接送时间。并且汇总消息推送至教师端、家长端</span></strong></span>
     </p>
     <p style="text-align: left; margin-top: 0px; margin-bottom: 5px;">
-        <span style="font-size: 14px;"><strong><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240); font-size: 18px;">&nbsp; 自动避障：</span> 通过红外、超声波等传感器，感知障外物并     进行紧急制动或避障<br/></span></strong></span>
+        <span style="font-size: 14px;"><strong><span style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 176, 240); font-size: 18px;">&nbsp; 自动避障：</span> 通过红外、超声波等传感器，感知障外物并进行紧急制动或避障<br/></span></strong></span>
     </p>
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
