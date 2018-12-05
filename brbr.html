@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+		<meta charset="UTF-8">
+		<title>测试</title>
+		<link href="aniview.min.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="ADAD.css">
+		<style>
+			.a3{height: 100px; background: #f00;margin-bottom: 50px;width: 100px;position: relative;left: 300px;}
+		</style>
+	</head>
+ 
+	<body>
+		 <div class="wrapper">
+  
+<div class="aniview content" av-animation="slideInRight">
+</div>
+<div class="aniview content1" av-animation="slideInRight">
+</div>
+<div class="aniview content2" av-animation="slideInRight">
+</div>
+</div>
+<div class="aniview right" av-animation="slideInRight">
+<div class="aniview content3" av-animation="slideInRight">
+    <br><br><br><br><br><br><center>高跟鞋</center>
+</div>
+</div>
+
+   <div  class="zuo" >
+</div>
+<div class="zj"><img src="7.jpg"><img src="8.jpg"></div>
+		<div class=" a1" av-animation="slideInRight">111111111</div>
+		<div class="2" av-animation="slideInLeft">22222222</div>
+		<div class="aniview  a10101010" av-animation="slideInRight">111111111</div>
+		<div class="aniview a1" av-animation="slideInLeft">22222222</div>
+		<div class="3" av-animation="slideInRight">111111111</div>
+		<div class="4" av-animation="slideInLeft">22222222</div>
+		<div class="5" av-animation="slideInRight">111111111</div>
+		<div class="aniview a1" av-animation="slideInLeft">22222222</div>
+		<div class="aniview a1" av-animation="slideInRight">111111111</div>
+		<div class="aniview a1" av-animation="slideInLeft">22222222</div>
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="jquery.aniview.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				var options = {
+					animateThreshold: 100,
+					scrollPollInterval: 50,
+				}
+				$('.aniview').AniView(options);
+			});
+		</script>
+	</body>
+ 
+</html>
