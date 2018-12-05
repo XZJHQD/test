@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="ADAD.css">
+<link href="aniview.min.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="tabulous.js"></script>
+<script src="jquery.aniview.min.js"></script>
+<link rel="stylesheet" type="text/css" href="reset-min.css">
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="common-header9.css">
+	<script type="text/javascript" src="common-header.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+	    $(function(){
+        // 页面浮动面板
+        $("#floatPanel > .ctrolPanel > a.arrow").eq(0).click(function(){$("html,body").animate({scrollTop :0}, 800);return false;});
+        $("#floatPanel > .ctrolPanel > a.arrow").eq(1).click(function(){$("html,body").animate({scrollTop : $(document).height()}, 800);return false;});
+        var objPopPanel = $("#floatPanel > .popPanel");	
+        var w = objPopPanel.outerWidth();
+        $("#floatPanel > .ctrolPanel > a.qrcode").bind({
+            mouseover : function(){
+                        objPopPanel.css("width","0px").show();
+                        objPopPanel.animate({"width" : w + "px"},300);return false;
+                },
+                mouseout : function(){
+                        objPopPanel.animate({"width" : "0px"},300);return false;
+                        objPopPanel.css("width",w + "px");
+            }	
+        });
+    });
+</script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			var i={animateThreshold:100};
+			$(".aniview").AniView(i),
+			$(".code").each(function(i,e){hljs.highlightBlock(e)})});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="logo"><img src="21.png" width="100%" height="100%"></div>
+	    <div class="menu">
+	    	<ul>
+	    		<li>
+	    			<a href="#" >网页首页</a>
+	    			<a href="#" >机器人</a>
+	    			<a href="#" >教育装备</a>
+	    			<a href="#" >行业应用</a>
+	    			<a href="#" >系统模块</a>
+	    			<a href="#" >信息动态</a>
+	    		</li>
+	    	</ul>
+	    </div>
+	</div>
+<br><br><br><br><br>
+    <div class="wrapper">
+  
+<div class="aniview content" av-animation="slideInLeft">
+</div>
+<div class="aniview content1" av-animation="slideInLeft">
+</div>
+<div class="aniview content2" av-animation="slideInLeft">
+</div>
+</div>
+<div class="right" >
+<div class="aniview content3" av-animation="slideInRight">
+    <br><br><br><br><br><br><center>高跟鞋</center>
+</div>
+</div>
+
+   <div  class="zuo" >
+</div>
+<div class="aniview zj" av-animation="slideInRight"><img src="7.jpg"><img src="8.jpg"></div>
+
+<div class=" aniview wowo" av-animation="slideInRight"><center><img src="18.jpg" width="100%" ></center></div>
+<div class=" aniview wowo1" av-animation="slideInRight"><center><img src="19.jpg"  width="100%"></center></div>
+<div class=" aniview wowo2" av-animation="slideInRight"><center><img src="20.jpg" width="100%" ></center></div>
+
+
+
+<br><br><br><br><br>
+	<div style="text-align:center">
+<!--浮动面板-->
+<div id="floatPanel">
+	<div class="ctrolPanel">
+		<a class="arrow" href="#"><span>顶部</span></a><a class="contact" href="#" target="_blank"><span>反馈</span></a><a class="qrcode" href="#"><span>微信二维码</span></a><a class="arrow" href="#"><span>底部</span></a></div>
+	<div class="popPanel">
+		<div class="popPanel-inner">
+			<div class="qrcodePanel">
+				<img src="images/weixin.jpg" /><span>扫描二维码关注我为好友</span></div>
+			<div class="arrowPanel">
+				<div class="arrow01">
+				</div>
+				<div class="arrow02">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+			$(document).ready(function() {
+				var options = {
+					animateThreshold: 100,
+					scrollPollInterval: 50,
+				}
+				$('.aniview').AniView(options);
+			});
+		</script>
+		<script type="text/javascript" >
+		$(document).ready(function($) {
+		    $('#tabs').tabulous({effect: 'scale'});
+            $('#tabs2').tabulous({effect: 'slideLeft'});
+            $('#tabs3').tabulous({effect: 'scaleUp' });
+            $('#tabs4').tabulous({effect: 'flip' });
+        });
+    </script>
+    <br><br><br><br>
+</body>
+</html>
